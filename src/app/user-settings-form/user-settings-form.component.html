@@ -6,6 +6,15 @@
     <input id ="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="userSettings.name" required #nameField="ngModel"
     [class.field-error]="form.submitted && nameField.invalid" (blur)="onBlur(nameField)" >
   
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <label for="startDate">Start Date</label>
+      <input type="text"
+             placeholder="Start Date"
+             class="form-control"
+             [(ngMdode)]="startDate" name="startDate" id="startDate"
+             bsDatepicker>
+    </div>
+  
     <button type="button" class="btn btn-primary" 
     name="singleModel"
     [(ngModel)]="singleModel" btnCheckbox btnCheckboxTrue="On"
