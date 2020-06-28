@@ -5,7 +5,13 @@
         <label for="name">Name</label>
     <input id ="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="userSettings.name" required #nameField="ngModel"
     [class.field-error]="form.submitted && nameField.invalid" (blur)="onBlur(nameField)" >
-  <div [hidden]='!form.submitted  || nameField.valid' class="alert alert-danger"> Enter a name</div> 
+  
+    <button type="button" class="btn btn-primary" 
+    name="singleModel"
+    [(ngModel)]="singleModel" btnCheckbox btnCheckboxTrue="On"
+  btnCheckboxFalse="Off">{{singleModel}} </button>
+  
+    <div [hidden]='!form.submitted  || nameField.valid' class="alert alert-danger"> Enter a name</div> 
   </div>
     <div class="form-check form-group">
         <input class="form-check-input" type="checkbox" id="emailOffers" name="emailOffers" [(ngModel)]="userSettings.emailOffers">
