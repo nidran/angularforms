@@ -46,9 +46,12 @@
         <label for="exampleFormControlTextarea1">Notes </label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="notes" [(ngModel)]="userSettings.notes" ></textarea>
       </div>
+      <div [hidden]="!postError"
+      class="alert alert-danger"> {{postErrorMessage}}
+    </div>
      
     <button class="btn btn-primary ">ok  </button>
 </form>
 
 </div>
-{{userSettings| json}}
+<!-- {{userSettings| json}} -->
